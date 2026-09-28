@@ -1,0 +1,21 @@
+{
+  "name": "cvgen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "docxtemplater": "^3.71.0",
+    "express": "^5.2.1",
+    "multer": "^2.4.0",
+    "nodemon": "^3.1.14",
+    "pizzip": "^3.3.0"
+  }
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>GvGen</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Gerador de Currículos</h1>
+
+      <p class="descricao">
+        Importe seu currículo base em DOCX e preencha os campos marcados com
+        <code>{{CAMPO}}</code>.
+      </p>
+
+      <!-- ================================= -->
+      <!-- CURRÍCULO -->
+      <!-- ================================= -->
+
+      <section class="card">
+        <h2>1. Currículo base</h2>
+
+        <p>Selecione seu arquivo DOCX:</p>
+
+        <input type="file" id="arquivo" accept=".docx" />
+
+        <button type="button" id="btnImportar">Importar currículo</button>
+
+        <div id="status" class="status"></div>
+      </section>
+
+      <!-- ================================= -->
+      <!-- CAMPOS -->
+      <!-- ================================= -->
+
+      <section id="areaCampos" class="card" style="display: none">
+        <h2>2. Campos editáveis</h2>
+
+        <p class="descricao-menor">
+          Preencha os campos encontrados no currículo.
+        </p>
+
+        <form id="formCampos">
+          <div id="campos"></div>
+
+          <!-- ================================= -->
+          <!-- EMPRESA -->
+          <!-- ================================= -->
+
+          <div class="campo empresa">
+            <label for="nomeEmpresa"> Nome da empresa </label>
+
+            <small> O nome será usado no nome do arquivo PDF. </small>
+
+            <input
+              type="text"
+              id="nomeEmpresa"
+              placeholder="Ex.: Google"
+              required
+            />
+          </div>
+
+          <button type="submit" class="gerar">Gerar currículo em PDF</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
